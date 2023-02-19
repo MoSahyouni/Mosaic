@@ -24,7 +24,7 @@ def main():
         if not os.path.isfile(input2):
             print('! ERROR input Image not found'.format(input2))
         elif not os.path.isdir(tiles):
-            print('! ERROR input tiles not found'.format(tiles))
+            print('! ERROR tiles directory not found'.format(tiles))
         else:
             print('Starting...')
             Mosaic = MosaicGenerator(input2, output, tiles, x, y)
@@ -37,6 +37,11 @@ def main():
                                              x, y, resizedTiles, pixelsMatches)
             Mosaic.save_result(newImage, Mosaic.output)
             print('finished.')
+    else: 
+        print('! ERROR no inputs were detected')
+        print('you have to to give at least the target image path...')
+        print('for example: python run.py -i target.jpg ')
+    
 
 if __name__ == '__main__':
 

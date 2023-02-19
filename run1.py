@@ -4,9 +4,9 @@ from MosaicGen import MosaicGenerator
 from TILES import Tiles
 
 def main():
-    input_img = input('input image name:')
-    output_img = input('output image name:')
-    tiles_dir = input('type tiles directory name:')
+    input_img = input('input image path:')
+    output_img = input('output image path:')
+    tiles_dir = input('type tiles directory path:')
     xinput = input('insert width of tiles:')
     yinput  = input('insert height of tiles:')
 
@@ -19,6 +19,8 @@ def main():
     '''set giving input'''
     if str(input_img) != '':
         input2 = str(input_img)
+    else:
+        print('you have to to give at least the target image path...')
     if str(output_img) != '':
         output = str(output_img)
     if str(tiles_dir) != '':
